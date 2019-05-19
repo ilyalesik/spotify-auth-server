@@ -2,6 +2,11 @@
 
 Simple Node.js server that implemented Client Credentials Flow Authorization. 
 
+## Start localy
+```bash
+CLIENT_ID=<your Spotify Client Id> CLIENT_SECRET=<your Spotify Client Secret> node local.js
+```
+
 ## Deploy with [Now](https://zeit.co/now)
 
 Configure secrets:
