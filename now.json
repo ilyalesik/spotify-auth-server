@@ -1,4 +1,9 @@
 {
     "version": 2,
-    "builds": [{ "src": "index.js", "use": "@now/node" }]
+    "builds": [{ "src": "index.js", "use": "@now/node" }],
+    "env": {
+        "NODE_ENV": "production",
+        "CLIENT_ID": "@spotify-client-id",
+        "CLIENT_SECRET": "@spotify-client-secret"
+    }
 }
