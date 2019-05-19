@@ -15,11 +15,18 @@ const postOptions = {
     }
 }
 
+const responseHeaders = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+    "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+    "Content-Type": "application/json; charset=utf-8"
+}
+
 module.exports = (req, res) => {
     fetch(`https://accounts.spotify.com/api/token`, postOptions)
         .then(response => {
             if (!response.ok) {
-                res.writeHead(500);
+                res.writeHead(500, responseHeaders);
                 res.end(JSON.stringify({
                     error: response.statusText
                 }));
@@ -28,7 +35,7 @@ module.exports = (req, res) => {
             return response.text()
         })
         .then(json => {
-            res.writeHead(200, { 'Content-Type': "application/json; charset=utf-8" });
+            res.writeHead(200, responseHeaders);
             res.end(json)
         });
 }
