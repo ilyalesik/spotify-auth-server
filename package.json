@@ -1,0 +1,26 @@
+{
+  "name": "spotify-auth-server",
+  "version": "0.0.1",
+  "description": "Spotify authorization server",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "now"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lm-a/spotify-auth-server.git"
+  },
+  "keywords": [
+    "spotify",
+    "node"
+  ],
+  "author": "Ilya Lesik <ilialesik@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lm-a/spotify-auth-server/issues"
+  },
+  "homepage": "https://github.com/lm-a/spotify-auth-server#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
