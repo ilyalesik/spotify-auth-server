@@ -1,6 +1,15 @@
 # spotify-auth-server
 
-Simple Node.js server that implemented Client Credentials Flow Authorization. 
+Simple Node.js server that implemented Spotify Authorization (through [Client Credentials Flow](https://developer.spotify.com/documentation/general/guides/authorization-guide/#client-credentials-flow)). 
+
+`curl -X "POST" <deployed_server_url>` returns json with `access_token`:
+```json
+{
+   "access_token": "NgCXRKc...MzYjw",
+   "token_type": "bearer",
+   "expires_in": 3600,
+}
+```
 
 ## Start localy
 ```bash
