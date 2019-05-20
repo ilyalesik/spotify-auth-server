@@ -7,7 +7,7 @@ Simple Node.js server that implemented Spotify Authorization (through [Client Cr
 {
    "access_token": "NgCXRKc...MzYjw",
    "token_type": "bearer",
-   "expires_in": 3600,
+   "expires_in": 3600
 }
 ```
 
@@ -32,6 +32,28 @@ or
 ```bash
 now
 ```
+
+## Refresh token support
+For scoped authorization without Spotify pop-up `refresh token` can be used.
+
+Configure secret:
+```bash
+now secret add spotify-refresh-token <your Spotify Refresh Token>
+```
+or as an environment variable:
+```bash
+CLIENT_ID=... CLIENT_SECRET=... REFRESH_TOKEN=<your Spotify Refresh Token> node local.js
+```
+`curl -X "POST" <deployed_server_url>` returns
+```json
+{
+   "access_token": "NgA6ZcYI...ixn8bUQ",
+   "token_type": "Bearer",
+   "scope": "user-read-private user-read-email",
+   "expires_in": 3600
+}
+```
+
 
 ## Sponsored
 <a href="https://lessmess.agency/?utm_source=spotify-auth-server">
