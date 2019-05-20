@@ -4,6 +4,7 @@
     "env": {
         "NODE_ENV": "production",
         "CLIENT_ID": "@spotify-client-id",
-        "CLIENT_SECRET": "@spotify-client-secret"
+        "CLIENT_SECRET": "@spotify-client-secret",
+        "REFRESH_TOKEN": "@spotify-refresh-token"
     }
 }
